@@ -1,0 +1,151 @@
+.h-bg {
+	margin-top: 37px;
+	height: auto;
+
+	@include desktop {
+		position: relative;
+		margin-top: 65px;
+	}
+	&__h {
+		@include desktop {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			width: 85%;
+			margin: auto;
+			max-width: 1116px;
+		}
+
+		&__content {
+			position: relative;
+			height: auto;
+
+			@include desktop {
+				position: static;
+				width: 500px;
+			}
+			&__hero {
+				background: url("../images/illustration-hero.svg");
+				height: 247px;
+				width: 100%;
+				background-size: 361px;
+				background-repeat: no-repeat;
+				background-position: center;
+				margin: auto;
+
+				@include desktop {
+					height: 386px;
+					background-size: cover;
+					transform: translateX(-60px);
+					width: 134%;
+					height: 478px;
+				}
+
+				@include phone {
+					background-size: 100%;
+					width: 85%;
+				}
+			}
+
+			&__blue {
+				position: absolute;
+				right: 0;
+				height: 210px;
+				width: 80%;
+				background-color: $primaryBlue;
+				top: 22%;
+				border-radius: 120px 0px 0px 120px;
+				z-index: -1;
+
+				@include desktop {
+					height: 353px;
+					width: 37%;
+					top: 31%;
+				}
+			}
+		}
+
+		&__text {
+			width: 85%;
+			margin: 45px auto 0px auto;
+			text-align: center;
+
+			@include desktop {
+				text-align: left;
+				width: 44%;
+				margin: 0px;
+				margin-top: 72px;
+			}
+
+			h1 {
+				font-size: 2.8rem;
+				color: $neutralDarkBlue;
+				font-weight: 500;
+
+				@include desktop {
+					font-size: 4.6rem;
+				}
+			}
+
+			p {
+				font-size: 1.6rem;
+				padding: 28px 0px;
+				color: $neutralBlue;
+				line-height: 1.5;
+
+				@include desktop {
+					font-size: 1.8rem;
+				}
+			}
+
+			&__btn-grp {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				@include desktop {
+					width: 69%;
+				}
+				button {
+					font-size: 1.6rem;
+					border: none;
+					padding: 16px 16px;
+
+					border-radius: 6px;
+					box-shadow: 0px 5px 6px rgb(228, 228, 228);
+
+					@include desktop {
+						padding: 16px 20px;
+						transition: 300ms ease-in-out;
+						cursor: pointer;
+					}
+
+					&:first-child {
+						border: 2px solid $primaryBlue;
+
+						background: $primaryBlue;
+						color: white;
+
+						&:hover {
+							@include desktop {
+								color: $primaryBlue;
+								background-color: white;
+							}
+						}
+					}
+
+					&:last-child {
+						background-color: rgb(238, 238, 238);
+						color: $neutralDarkBlue;
+						border: 2px solid rgb(238, 238, 238);
+
+						&:hover {
+							background-color: white;
+							border: 2px solid $neutralDarkBlue;
+						}
+					}
+				}
+			}
+		}
+	}
+}

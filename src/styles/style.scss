@@ -1,0 +1,47 @@
+@import "./global";
+@import "./color";
+@import "./breakpoint";
+@import "./header";
+@import "./intro";
+@import "./feature";
+@import "./browser";
+@import "./faq";
+@import "./footer";
+
+.overlay {
+	height: 100vh;
+	width: 100%;
+	background-color: $neutralDarkBlue;
+	position: fixed;
+	z-index: 1;
+	opacity: 0;
+	display: none;
+	top: 0%;
+	animation: overlay-fade-in 500ms ease forwards;
+
+	&.open {
+		display: block;
+		opacity: 0;
+		// animation: overlay-fade-in 500ms ease forwards;
+	}
+
+	&__soc-med {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		bottom: 10%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 85px;
+	}
+}
+
+@keyframes overlay-fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.9;
+	}
+}

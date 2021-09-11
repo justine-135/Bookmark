@@ -1,0 +1,246 @@
+.foo-bg {
+	width: 100%;
+	height: auto;
+	margin-top: 100px;
+
+	&__contact-bg {
+		background-color: $primaryBlue;
+		&__contact {
+			width: 85%;
+			margin: auto;
+			text-align: center;
+			padding-top: 65px;
+			padding-bottom: 52px;
+			height: auto;
+			position: relative;
+
+			@include desktop {
+				padding-bottom: 65px;
+			}
+
+			span {
+				font-size: 1.2rem;
+				color: rgba(255, 255, 255, 0.869);
+				letter-spacing: 5px;
+			}
+
+			h6 {
+				font-size: 2.4rem;
+				color: white;
+				font-weight: 500;
+				margin-top: 16px;
+
+				@include desktop {
+					font-size: 2.8rem;
+					width: 33%;
+					margin: 40px auto 0px auto;
+				}
+			}
+
+			&__form {
+				display: flex;
+				flex-direction: column;
+				margin-top: 32px;
+
+				@include desktop {
+					flex-direction: row;
+					margin: 32px auto 0px auto;
+					justify-content: space-between;
+					width: 37%;
+					position: relative;
+					max-width: 450px;
+				}
+
+				input[type="text"] {
+					border: none;
+					padding: 16px;
+					border-radius: 4px;
+					border: 3px solid white;
+					position: relative;
+					z-index: 1;
+
+					@include desktop {
+						width: 66%;
+						padding: 12px;
+					}
+
+					&.invalid {
+						border: 3px solid $primaryRed;
+					}
+
+					&:focus {
+						outline: none;
+					}
+				}
+				.alert-icon.alert {
+					display: block;
+				}
+
+				.alert-icon {
+					display: none;
+					position: absolute;
+					z-index: 2;
+					right: 5%;
+					transform: translateY(16px);
+
+					@include desktop {
+						right: 37%;
+						transform: translateY(13px);
+					}
+				}
+
+				.alert-none.alert {
+					display: block;
+				}
+
+				.alert-none {
+					display: none;
+					height: 30px;
+					width: 100%;
+					background-color: $primaryRed;
+					transform: translateY(-5px);
+					position: relative;
+					z-index: 0;
+					border-radius: 0px 0px 6px 6px;
+					color: rgba(255, 255, 255, 0.91);
+					padding-top: 9px;
+					text-align: left;
+					padding-left: 16px;
+					font-size: 1.2rem;
+					font-style: italic;
+					font-weight: 500;
+
+					@include desktop {
+						position: absolute;
+						width: 66%;
+						bottom: -70%;
+					}
+				}
+
+				input[type="submit"] {
+					background-color: $primaryRed;
+					color: white;
+					border: none;
+					padding: 16px;
+					border-radius: 4px;
+					font-size: 1.6rem;
+					margin-top: 14px;
+					border: 2px solid $primaryRed;
+
+					@include desktop {
+						margin-top: 0px;
+						padding: 12px 24px;
+						transition: 300ms ease-in-out;
+						cursor: pointer;
+					}
+
+					&:hover {
+						background-color: white;
+						color: $primaryRed;
+					}
+				}
+			}
+		}
+	}
+
+	&__footer-links-bg {
+		background-color: $neutralDarkBlue;
+		height: auto;
+
+		&__inside {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			align-items: center;
+			padding: 32px 0px 36px 0px;
+
+			@include desktop {
+				flex-direction: row;
+				justify-content: space-between;
+				width: 85%;
+				margin: auto;
+				max-width: 1116px;
+			}
+
+			.logo {
+				.first-g {
+					path {
+						fill: white;
+					}
+				}
+
+				@include desktop {
+					margin-right: 80px;
+				}
+			}
+
+			&__links {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 41px 0px 41px 0px;
+
+				@include desktop {
+					flex-direction: row;
+					padding: 0px;
+					width: 30%;
+					justify-content: space-between;
+					margin-right: auto;
+				}
+				a {
+					text-decoration: none;
+					text-transform: uppercase;
+					color: rgba(255, 255, 255, 0.8);
+					font-size: 1.6rem;
+
+					@include desktop {
+						transition: 300ms ease-in-out;
+					}
+
+					&:hover {
+						@include desktop {
+							color: $primaryRed;
+						}
+					}
+
+					&:nth-child(2) {
+						margin-top: 29px;
+						margin-bottom: 29px;
+
+						@include desktop {
+							margin: 0px;
+						}
+					}
+				}
+			}
+
+			&__socmed {
+				display: flex;
+				align-items: center;
+				width: 100px;
+				justify-content: space-between;
+
+				@include desktop {
+					width: 80px;
+
+					svg {
+						cursor: pointer;
+						path {
+							transition: 300ms ease-in-out;
+						}
+					}
+				}
+
+				svg {
+					&:hover {
+						@include desktop {
+							path {
+								fill: $primaryRed;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
